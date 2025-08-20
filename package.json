@@ -1,5 +1,5 @@
 {
-  "name": "react-native-dominant-color",
+  "name": "react-native-dominant-color-enhanced",
   "version": "0.1.0",
   "description": "React native package to get colors palette from image",
   "main": "./lib/module/index.js",
