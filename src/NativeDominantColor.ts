@@ -1,8 +1,16 @@
 import type { TurboModule } from 'react-native';
 import { TurboModuleRegistry } from 'react-native';
 
+export type ColorPalette = {
+  platform: 'ios' | 'android';
+  background: string;
+  primary: string;
+  secondary: string;
+  detail: string;
+};
+
 export interface Spec extends TurboModule {
-  multiply(a: number, b: number): number;
+  getColorPalette(imagePath: string): ColorPalette | null;
 }
 
 export default TurboModuleRegistry.getEnforcing<Spec>('DominantColor');

@@ -1,5 +1,5 @@
-import DominantColor from './NativeDominantColor';
+import DominantColor, { type ColorPalette } from './NativeDominantColor';
 
-export function multiply(a: number, b: number): number {
-  return DominantColor.multiply(a, b);
+export function getColorPalette(imagePath: string): ColorPalette | null {
+  return DominantColor.getColorPalette(imagePath);
 }
