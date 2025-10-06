@@ -4,10 +4,7 @@
 @implementation DominantColor
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(getColorPalette:(NSString *)imagePath
-                  resolver:(RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
-{
+RCT_EXPORT_METHOD(getColorPalette:(NSString *))imagePath resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject {
     if (imagePath.length == 0) { resolve(nil); return; }
 
     void (^finishWithImage)(UIImage *) = ^(UIImage *image) {
