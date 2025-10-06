@@ -10,7 +10,7 @@ export type ColorPalette = {
 };
 
 export interface Spec extends TurboModule {
-  getColorPalette(imagePath: string): ColorPalette | null;
+  getColorPalette(imagePath: string): Promise<ColorPalette | null>;
 }
 
 export default TurboModuleRegistry.getEnforcing<Spec>('DominantColor');
